@@ -3,6 +3,8 @@
 .AppleDouble
 .LSOverride
 
+.htaccess
+
 # sass
 .sass-cache/
 #*.css.map

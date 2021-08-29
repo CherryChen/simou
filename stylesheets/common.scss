@@ -1,0 +1,55 @@
+a {
+  text-decoration: none;
+  color: #808080;
+  &:hover, &:focus, &:active {
+    text-decoration: none;
+    color: #999;
+  }
+}
+  
+dl, ul, ol {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+  padding: 0;
+  font-size: 1rem;
+}
+
+h1 {
+  font-size: 1.375rem;
+}
+  
+.img-cover {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.font-size-1 {
+  font-size: .75rem !important;
+}
+
+.font-size-2 {
+  font-size: .875rem !important;
+}
+
+.ls-2 {
+  letter-spacing: 2px;
+}
+
+// buttons
+.btn-primary {
+  background-color: #000;
+  border-color: #000;
+}
+.btn-primary:not(:disabled):not(.disabled).active, .btn-primary:not(:disabled):not(.disabled):active, .show>.btn-primary.dropdown-toggle {
+  background-color: #333;
+  border-color: #333;
+}
+.btn-primary:not(:disabled):not(.disabled).active:focus, .btn-primary:not(:disabled):not(.disabled):active:focus, .show>.btn-primary.dropdown-toggle:focus {
+  box-shadow: none;
+}

@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.80.0">
+    <title>Simou Design Studio</title>
+    <link rel="icon" href="/images/favicon.ico" size="16x16">
+
+    <!-- CSS -->
+    <link href="/vendor/bootstrap/bootstrap.min.css" rel="stylesheet">
+    <link href="/stylesheets/common.css" rel="stylesheet">
+    <link href="/stylesheets/layout.css" rel="stylesheet">
+    <link href="/stylesheets/style.css" rel="stylesheet">
+
+    <!-- JS -->
+    <script src="/vendor/js/jquery-3.5.1.slim.min.js"></script>
+    <script src="/vendor/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="/vendor/js/lozad.min.js"></script>
+    <script src="/js/main.js"></script>
+  </head>
+  <body>
+
+  <!-- header bar -->
+  <header>
+    <div class="navbar navbar-expand-md fixed-top bg-white align-items-center justify-content-between">
+      <div class="menu-btn">
+        <div class="deco-line-top"></div>
+        <div class="deco-line-middle"></div>
+        <div class="deco-line-bottom"></div>
+      </div>
+      <a href=""><img src="/images/SIMOU-logo.png" alt="" class="logo"></a>
+      <div class="d-flex align-items-center">
+        share
+      </div>
+    </div>
+  </header>
+
+  <!-- main content -->
+  <main role="main" id="main-container" calss="container-fluid">
+    <!-- preload -->
+    <div class="loading-container">
+      <div class="loading">
+        <div class="cycle"></div>
+      </div>
+    </div>
+    <!-- nav -->
+    <div class="nav-overlay is-hide"></div>
+    <nav class="menu bg-white">
+      <ul>
+        <li class="my-3"><a href="/en/">Home</a></li>
+        <li class="my-3"><a href="about.html">About</a></li>
+        <li class="my-3"><a href="javascript:;">Team</a></li>
+        <li class="my-3"><a href="project.html">Project</a></li>
+        <li class="my-3"><a href="javascript:;">Service</a></li>
+        <li class="my-3"><a href="javascript:;">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="container-fluid overflow-hidden">
+      <div class="row">
+        <div class="col-md-6 col-sm-1 content-height p-0">
+          <img src="/images/bg/001.jpg" alt="" class="img-cover">
+        </div>
+        <div class="col-md-6 col-sm-1 content-height overflow-auto bg-white p-5">
+          <div class="text-contaioner px-5">
+            <h1 class="mb-3">ABOUT SIMOU</h1>
+            <h2 class="mb-2">Our Design Philosophy</h2>
+            <p class="mb-4">"Design is an exploration of each individual uniqueness in order to create and capture elements of surprise in extraordinary spaces."</p>
+            <p class="mb-2">SIMOU design was found in Taipei, Taiwan in 1983, then established in Shanghai September 2010 and set up its first US branch in Dallas, Texas. SIMOU design extends from hospitality, commercial, residential, and the Food & Beverage industries. Our team of talented, multidisciplinary designers challenge each other through their design journey to create unique and extraordinary designs.</p>
+            <p class="mb-2">SIMOU emphasizes identifying the unique parameters of each project, and ensuring that the space, material, lighting, color and details are addressed in order to arrive at the best design solution. Each design is tailored to meet the specific demands and values of each project while collaborating with architecture, landscape and graphic designers to ensure a cohesive space.</p>
+            <p class="mb-2">SIMOU design team is also passionate about community involvement, bringing to light the importance of environmental sustainability and non-profit work. We believe that well designed spaces have the ability to optimize our life. Our pursuit in providing our community with the upmost service and quality leads to our ability to provide extraordinary and unique designs.</p>
+          </div>
+        </div>
+      </div> 
+      
+    </div>
+    
+
+    <!-- footer bar -->
+    <footer class="container-fluid footer d-flex align-items-center fixed-bottom bg-white">
+      <span>&copy; SIMOU Design Studio 2016  All rights reserved.</span>
+      <a href="http://www.miitbeian.gov.cn/publish/query/indexFirst.action" class="ml-2">沪ICP备12026578号</a>
+    </footer>
+  </main>
+
+      
+  <script>
+    $(function() {
+      categoryFilter();
+
+      const observer = lozad(); // 默認使用 '.lozad' 選擇器
+      observer.observe();
+    });
+
+    function categoryFilter() {
+      $(".filter-button").click(function(){
+        var value = $(this).attr('data-filter');
+        
+        if(value == "all") {
+          $('.filter').show('1000');
+        }
+        else {
+          $(".filter").not('.'+value).hide('3000');
+          $('.filter').filter('.'+value).show('3000');        
+        }
+      });
+      if ($(".filter-button").removeClass("active")) {
+        $(this).removeClass("active");
+      }
+      $(this).addClass("active");
+    }
+  </script>
+  </body>
+</html>
